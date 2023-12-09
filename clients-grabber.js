@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const cloudinary = require("cloudinary").v2;
 // Define the path to the JSON file
-const jsonFilePath = path.join(__dirname, 'JSON-datas', 'images.json');
+const jsonFilePath = path.join(process.cwd(), 'JSON-datas', 'images.json');
 console.log("Image JSON File Path = " + jsonFilePath);
 
 cloudinary.config({
@@ -20,7 +20,7 @@ async function UploadToServer(req, res) {
 
     const upimg = req.files.upimg;
     const uniqueFileName = `client_${Date.now()}.png`;
-    const imagePath = path.join(__dirname, "uploads", uniqueFileName);
+    const imagePath = path.join(process.cwd(), "uploads", uniqueFileName);
     console.log("the img path == " + imagePath);
 
     await upimg.mv(imagePath);

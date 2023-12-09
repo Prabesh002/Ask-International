@@ -4,7 +4,7 @@ const fs = require("fs");
 const router = express.Router();
 
 
-const jsonFilePath = path.join(__dirname, 'JSON-datas', 'projects.json');
+const jsonFilePath = path.join(process.cwd(), 'JSON-datas', 'projects.json');
 const { uploadImageToCloudinary } = require('./clients-grabber');
 
 // Middleware to read project data from JSON file
@@ -52,7 +52,7 @@ router.post('/upload-project', async (req, res) => {
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
 
     // Process the banner image
-    const bannerImagePath = path.join(__dirname, "uploads", `client_${Date.now()}_banner.png`);
+    const bannerImagePath = path.join(process.cwd(), "uploads", `client_${Date.now()}_banner.png`);
     console.log("The Directoy is (dir path) == " +bannerImagePath);
     await bannerImage.mv(bannerImagePath);
     const bannerUrl = await uploadImageToCloudinary(bannerImagePath);
@@ -61,7 +61,7 @@ router.post('/upload-project', async (req, res) => {
     // Process each image file
     const imageUrls = [];
     for (const image of images) {
-      const imagePath = path.join(__dirname, "uploads", `client_${Date.now()}_image.png`);
+      const imagePath = path.join(process.cwd(), "uploads", `client_${Date.now()}_image.png`);
       console.log("The Directoy is (img path) == " + imagePath);
       await image.mv(imagePath);
       const imageUrl = await uploadImageToCloudinary(imagePath);
@@ -124,7 +124,7 @@ router.put('/edit-project/:projectType/:projectName', async (req, res) => {
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
     console.log(req.body);
     // Process the banner image
-    const bannerImagePath = path.join(__dirname, "uploads", `client_${Date.now()}_banner.png`);
+    const bannerImagePath = path.join(process.cwd(), "uploads", `client_${Date.now()}_banner.png`);
     await bannerImage.mv(bannerImagePath);
     const bannerUrl = await uploadImageToCloudinary(bannerImagePath);
     fs.unlinkSync(bannerImagePath);
@@ -132,7 +132,7 @@ router.put('/edit-project/:projectType/:projectName', async (req, res) => {
     // Process each image file
     const imageUrls = [];
     for (const image of images) {
-      const imagePath = path.join(__dirname, "uploads", `client_${Date.now()}_image.png`);
+      const imagePath = path.join(process.cwd(), "uploads", `client_${Date.now()}_image.png`);
       await image.mv(imagePath);
       const imageUrl = await uploadImageToCloudinary(imagePath);
       fs.unlinkSync(imagePath);
