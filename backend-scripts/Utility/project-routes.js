@@ -63,7 +63,7 @@ router.post('/upload-project', async (req, res) => {
       const imagePath = path.join(__dirname, "uploads", `client_${Date.now()}_image.png`);
       await image.mv(imagePath);
       const imageUrl = await uploadImageToCloudinary(imagePath);
-      fs.unlinkSync(imagePath);
+    
       imageUrls.push(imageUrl.secure_url);
     }
 
