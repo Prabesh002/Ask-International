@@ -170,27 +170,44 @@ p{
 }
 }
 .projects-grid {
-  display: grid;
+  display: flex;
   gap: 20px;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start; /* Align items at the start of the flex container */
+  align-items: center; /* Center items along the cross axis (y-axis in this case) */
   flex-wrap: wrap;
 }
 
 .project-item {
-  max-width: 12em;
+  max-width: 16em; /* Increase max-width for more spacious items */
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 5px 5px #646464;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.project-item:hover {
+  transform: scale(1.05); /* Increase size on hover for a subtle zoom effect */
 }
 
 .banner-container {
   height: 100px;
+  width: 100%;
   background-size: cover;
   background-position: center;
 }
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+
+
 
 .overlay {
   display: flex;
@@ -205,6 +222,14 @@ p{
   z-index: 1000;
 }
 
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* Existing styles for the modal */
 .modal {
   background: #fff;
   border-radius: 8px;
@@ -214,53 +239,40 @@ p{
   max-height: 80%;
   overflow: auto;
   position: relative;
+ 
 }
 
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-
-#projectImages {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-#projectImages img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.loading-screen {
+/* New styles for the modal header */
+.modal-header {
   text-align: center;
-  font-size: 1.5em;
   margin-bottom: 20px;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+#projectImages {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  flex-direction: row;
 }
 
-.loading-screen::after {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 4px solid #333;
-  border-top: 4px solid #fff;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
+#projectImages img {
+  width: 100px; /* Adjust the width of each image as needed */
+  height: 75px; /* Set a specific aspect ratio for a rectangle shape (e.g., 4:3) */
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+#projectImages img:hover {
+  transform: scale(1.05); /* Add a subtle zoom effect on hover */
+}
+
+/* New styles for the bottom text */
+.modal-bottom-text {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
 }
