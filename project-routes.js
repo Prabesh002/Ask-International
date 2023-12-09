@@ -53,6 +53,7 @@ router.post('/upload-project', async (req, res) => {
 
     // Process the banner image
     const bannerImagePath = path.join(__dirname, "uploads", `client_${Date.now()}_banner.png`);
+    console.log("The Directoy is (dir path) == " +bannerImagePath);
     await bannerImage.mv(bannerImagePath);
     const bannerUrl = await uploadImageToCloudinary(bannerImagePath);
     fs.unlinkSync(bannerImagePath);
@@ -61,6 +62,7 @@ router.post('/upload-project', async (req, res) => {
     const imageUrls = [];
     for (const image of images) {
       const imagePath = path.join(__dirname, "uploads", `client_${Date.now()}_image.png`);
+      console.log("The Directoy is (img path) == " + imagePath);
       await image.mv(imagePath);
       const imageUrl = await uploadImageToCloudinary(imagePath);
       fs.unlinkSync(imagePath);
