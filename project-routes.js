@@ -4,8 +4,8 @@ const fs = require("fs");
 const router = express.Router();
 
 
-const jsonFilePath = path.join(__dirname, '..', 'project-data', 'projects.json');
-const { uploadImageToCloudinary } = require('../../Server-Data/scripts/clients-grabber');
+const jsonFilePath = path.join(__dirname, 'JSON-datas', 'projects.json');
+const { uploadImageToCloudinary } = require('./clients-grabber');
 
 // Middleware to read project data from JSON file
 function readProjects() {
@@ -63,7 +63,7 @@ router.post('/upload-project', async (req, res) => {
       const imagePath = path.join(__dirname, "uploads", `client_${Date.now()}_image.png`);
       await image.mv(imagePath);
       const imageUrl = await uploadImageToCloudinary(imagePath);
-    
+      fs.unlinkSync(imagePath);
       imageUrls.push(imageUrl.secure_url);
     }
 

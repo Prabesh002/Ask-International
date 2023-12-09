@@ -13,7 +13,7 @@ const routes = require("./routes/manage-routes")
 
 const sendEmail = require("./backend-scripts/Utility/contact")
 const ImagesGrabber =  require("./backend-scripts/Utility/imageGrabber");
-const projectRoutes = require('./backend-scripts/Utility/project-routes');
+const projectRoutes = require('./project-routes');
 
 //Usages
 app.use(express.json());

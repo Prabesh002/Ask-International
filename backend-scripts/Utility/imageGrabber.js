@@ -1,5 +1,5 @@
 const express = require("express");
-const { grabImages, writeImages, UploadToServer,removeImage  } = require('../../Server-Data/scripts/clients-grabber');
+const { grabImages, writeImages, UploadToServer,removeImage  } = require('../../clients-grabber');
 const router = express.Router();
 
 
