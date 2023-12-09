@@ -4,7 +4,7 @@
       { "src": "SERVER.js", "use": "@now/node" }
     ],
     "routes": [
-      { "src": "/(.*)", "dest": "/SERVER.js" }
+      { "src": "/(.*)", "dest": "/server.js" }
     ]
   }
   
