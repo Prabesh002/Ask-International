@@ -27,7 +27,7 @@ async function UploadToServer(req, res) {
 
     // You can do additional processing here if needed
     const cloudinaryResult = await uploadImageToCloudinary(imagePath);
-    fs.unlinkSync(imagePath);
+    //fs.unlinkSync(imagePath);
     const newURL = cloudinaryResult.secure_url;
     writeImages(newURL);
     return res.status(200).send('File uploaded!');
