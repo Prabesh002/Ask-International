@@ -1,7 +1,7 @@
 {
   "main": "server.js",
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node server.js"
