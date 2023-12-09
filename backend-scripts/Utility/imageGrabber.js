@@ -20,6 +20,7 @@ router.post('/write-image', async (req, res) => {
 
 router.post('/remove-image', (req, res) => {
   try {
+    console.log("Current Working Directory: (removing images)", process.cwd());
     const imageUrlToRemove = req.body.imageUrl;
 
     // Call the removeImage function to remove the image

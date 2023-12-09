@@ -22,6 +22,7 @@ function writeProjects(data) {
 
 router.get('/projects', (req, res) => {
   try {
+    console.log("Current Working Directory:", process.cwd());
     const projects = readProjects();
 
     // Extract project details with additional info (project name)
@@ -47,11 +48,13 @@ router.get('/projects', (req, res) => {
 // New route to handle project upload
 router.post('/upload-project', async (req, res) => {
   try {
+    
     const { comments, projectType, projectName } = req.body;
     const bannerImage = req.files.banner;
     const images = Array.isArray(req.files.images) ? req.files.images : [req.files.images];
-
-    // Process the banner image
+    console.log("Current Working Directory:", process.cwd());
+   
+    
     const bannerImagePath = path.join(process.cwd(), "uploads", `client_${Date.now()}_banner.png`);
     console.log("The Directoy is (dir path) == " +bannerImagePath);
     await bannerImage.mv(bannerImagePath);
