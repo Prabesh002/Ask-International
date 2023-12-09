@@ -1,6 +1,17 @@
 {
   "services": {
     "ongoing": [],
-    "completed": []
+    "completed": [
+      {
+        "banner": "https://res.cloudinary.com/dxdry321q/image/upload/v1702117470/restaurant_images/xbpg0swi3zemdactzsty.png",
+        "images": [
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1702117472/restaurant_images/irdhbjamkrcdzfijd7p7.jpg"
+        ],
+        "comments": [
+          "gtr"
+        ],
+        "projectName": "WOW"
+      }
+    ]
   }
 }
