@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="static/Css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link type="text/css" rel="stylesheet" href="static/Css/contact.css">
+    <link type="text/css" rel="stylesheet" href="static/Css/anim.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+  
+    <title>Contact Page</title>
+</head>
+<body>
+ 
+
+  
+  <div class="loading" id="loading-panel">
+    <svg width="200" height="200" viewBox="0 0 100 100">
+      <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+      <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+    </svg>
+  </div>
+    <div id="container">
+        <h1> Contact Us</h1>
+        <div class="underline">
+        </div>
+        <form action="#" method="post" id="contact_form">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" placeholder="My name is" name="name" id="name_input" required>
+          </div>
+          <div class="email">
+            <label for="email"></label>
+            <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+          </div>
+          <div class="telephone">
+            <label for="name"></label>
+            <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+          </div>
+          <div class="subject">
+            <label for="subject"></label>
+            <select placeholder="Subject line" name="subject" id="subject_input" required>
+              <option disabled hidden selected>Topic To Discuss</option>
+              <option>I'd like to start a project</option>
+              <option>I'd like to ask a question</option>
+              <option>I'd like to make a proposal</option>
+            </select>
+          </div>
+          <div class="message">
+            <label for="message"></label>
+            <textarea name="message" placeholder="I'd like to chat about" id="message_input" cols="30" rows="5" required></textarea>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Send Message" id="form_button" />
+          </div>
+        </form><!-- // End form -->
+      </div><!-- // End #container -->
+    
+</body>
+<script src="/static/Javascript/contactpage.js"></script>
+</html>

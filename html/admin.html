@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/static/Css/admin.css">
+    <link type="text/css" rel="stylesheet" href="/static/Css/adminextras.css">
+    <link type="text/css" rel="stylesheet" href="/static/Css/loading.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="loader">
+        <svg class="ip" viewBox="0 0 256 128" width="256px" height="128px" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#5ebd3e" />
+                    <stop offset="33%" stop-color="#ffb900" />
+                    <stop offset="67%" stop-color="#f78200" />
+                    <stop offset="100%" stop-color="#e23838" />
+                </linearGradient>
+                <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+                    <stop offset="0%" stop-color="#e23838" />
+                    <stop offset="33%" stop-color="#973999" />
+                    <stop offset="67%" stop-color="#009cdf" />
+                    <stop offset="100%" stop-color="#5ebd3e" />
+                </linearGradient>
+            </defs>
+            <g fill="none" stroke-linecap="round" stroke-width="16">
+                <g class="ip__track" stroke="#ddd">
+                    <path d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                    <path d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                </g>
+                <g stroke-dasharray="180 656">
+                    <path class="ip__worm1" stroke="url(#grad1)" stroke-dashoffset="0"
+                        d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                    <path class="ip__worm2" stroke="url(#grad2)" stroke-dashoffset="358"
+                        d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div id="loadingOverlay" >
+        <div class="loading-screen"></div>
+      </div>
+      
+      <div id="messageOverlay">
+        <div class="message-content">
+          <span id="messageText"></span>
+          <span class="close-btn">&times;</span>
+        </div>
+      </div>
+    <header>
+        <h1>Admin Panel</h1>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#" onclick="toggleImageSection()">Images</a>
+        <a href="#" onclick="toggleSettingsSection()">Project Management</a>
+    </nav>
+
+    <div id="imageSection">
+        <h2>Image Upload</h2>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <label for="images" class="drop-container" id="dropcontainer">
+                <span class="drop-title">Drop files here</span>
+                or
+                <input type="file" id="imageInput" accept="image/*" required>
+            </label>
+
+            <button type="button" onclick="uploadImage()">Upload Image</button>
+        </form>
+
+        <div id="existingImagesContainer"></div>
+        
+    </div>
+
+    <div id="settingsSection" style="display: none;">
+        <h2>Settings</h2>
+        
+        <!-- Subsection: Project Upload -->
+        <div id="projectUploadSection">
+            <h3>Project Upload</h3>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <!-- Banner Image -->
+                <label for="bannerImage" class="drop-container">
+                    <span class="drop-title">Drop banner image here</span>
+                    or
+                    <input type="file" id="bannerImageInput" accept="image/*" required>
+                </label>
+    
+                <!-- Comments -->
+                <textarea id="comments" placeholder="Enter comments"></textarea>
+    
+                <!-- Multiple Images -->
+                <label for="images" class="drop-container">
+                    <span class="drop-title">Drop additional images here</span>
+                    or
+                    <input type="file" id="imagesInput" accept="image/*" multiple>
+                </label>
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required>
+    
+                <!-- Dropdown for Site Type -->
+                <select id="siteType" required>
+                    <option value="ongoing">Ongoing</option>
+                    <option value="completed">Completed</option>
+                </select>
+    
+                <button type="button" onclick="uploadProject()">Upload Project</button>
+            </form>
+        </div>
+    
+        <!-- Subsection: Project Manage -->
+        <div id="projectManageSection" ">
+            <h3>Project Manage</h3>
+            <div id="projectList" class="flex-container"></div>
+        </div>
+    
+    </div>
+    
+</body>
+<script src="/static/Javascript/write-images.js"></script>
+<script src="/static/Javascript/admin-panel.js"></script>
+<script type="module" src="/static/Javascript/auth-check.js"></script>
+<script>
+    // Your additional scripts or initialization if needed
+</script>
+
+</html>

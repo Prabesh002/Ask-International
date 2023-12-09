@@ -1,0 +1,13 @@
+.show {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0); /* Remove blur */
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease; /* Add blur transition */
+  }
+  
+  .hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(10px); /* Add initial blur */
+    transition: none;
+  }

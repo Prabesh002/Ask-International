@@ -1,0 +1,28 @@
+{
+  "services": {
+    "ongoing": [
+      {
+        "banner": "https://res.cloudinary.com/dxdry321q/image/upload/v1702102664/restaurant_images/nen0d2tkjy4bz9a5opgr.png",
+        "images": [
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1702102665/restaurant_images/oc1btgmnp80tuqebet7b.png"
+        ],
+        "comments": "Hello wqwads",
+        "projectName": "Not Company"
+      }
+    ],
+    "completed": [
+      {
+        "banner": "https://res.cloudinary.com/dxdry321q/image/upload/v1702103520/restaurant_images/wjfqga1guocirbjs5xdx.jpg",
+        "images": [
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1702103521/restaurant_images/cnilgiurwianad8eh0bl.jpg",
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1702103523/restaurant_images/mwhvvwbnwzgvjphuwrez.jpg",
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1702103524/restaurant_images/egr01bvvbkba4o6tmbih.png"
+        ],
+        "comments": [
+          "Wow, I'm Actually Impressed!"
+        ],
+        "projectName": "Hetauda Man"
+      }
+    ]
+  }
+}

@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+
+html {
+  font-family: 'Poppins', Arial, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #333, #111); /* Dark mode linear gradient background */
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, select, textarea {
+  color: #F2F3EB; /* Light gray text color */
+  font: inherit;
+  margin: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+textarea {
+  overflow: auto;
+  backdrop-filter: blur(5px); /* Add blur to the contact form */
+}
+
+#container {
+  border: solid 3px #F2F3EB; /* Light gray border */
+  max-width: 768px;
+  margin: 60px auto;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5); /* Add semi-transparent background for the container */
+}
+
+form {
+  padding: 37.5px;
+  margin: 50px 0;
+}
+
+h1 {
+  color: #F2F3EB; /* Light gray header text color */
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px; /* Reduced letter spacing */
+  text-align: center;
+}
+
+.underline {
+  border-bottom: solid 2px #F2F3EB; /* Light gray underline */
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+.icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+.icon {
+  display: block;
+  fill: #F2F3EB; /* Light gray icon color */
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+.email {
+  float: right;
+  width: 45%;
+}
+
+input[type='text'], [type='email'], select, textarea {
+  background: none;
+  border: none;
+  border-bottom: solid 2px #F2F3EB; /* Light gray underline */
+  color: #F2F3EB; /* Light gray text color */
+  font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0em 0 1.875em 0;
+  padding: 0 0 0.875em 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input[type='text']:focus, [type='email']:focus, textarea:focus {
+  outline: none;
+  padding: 0 0 0.875em 0;
+}
+
+.message {
+  float: none;
+}
+
+.name {
+  float: left;
+  width: 45%;
+}
+
+select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -webkit-appearance: none; /* Hide the default appearance for webkit browsers */
+  -moz-appearance: none; /* Hide the default appearance for Firefox */
+  appearance: none; /* Hide the default appearance for all other browsers */
+  background-color: #333; /* Dark gray background for the select */
+  color: #F2F3EB; /* Light gray text color for the select */
+  border: solid 2px #F2F3EB; /* Light gray border for the select */
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.subject {
+  width: 100%;
+}
+
+.telephone {
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+  color: #F2F3EB; /* Light gray placeholder text color */
+}
+
+:-moz-placeholder {
+  color: #F2F3EB; /* Light gray placeholder text color */
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #F2F3EB; /* Light gray placeholder text color */
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #F2F3EB; /* Light gray placeholder text color */
+}
+
+#form_button {
+  background: none;
+  border: solid 2px #F2F3EB; /* Light gray border */
+  color: #F2F3EB; /* Light gray text color */
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#form_button:hover {
+  background: #F2F3EB; /* Light gray background on hover */
+  color: #111; /* Dark text color on hover */
+}
+
+
+@media screen and (max-width: 768px) {
+  #container {
+    margin: 20px auto;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 26px;
+  }
+  
+  .underline {
+    width: 68px;
+  }
+  
+  #form_button {
+    padding: 15px 25px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 18px;
+  }
+  
+  .icon {
+    height: 35px;
+    width: 35px;
+  }
+  
+  .underline {
+    width: 53px;
+  }
+  
+  input[type='text'], [type='email'], select, textarea {
+    font-size: 0.875em;
+  }
+}
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Tinted color with some transparency */
+  z-index: 9999; /* Set a high z-index to cover everything */
+  display: block;
+}
+
+#background-svg {
+ 
+  z-index: -1; /* Place it behind other content */
+  pointer-events: none; /* Allow interaction with content above */
+}
+
+
+svg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg) scale(1);
+          transform: translate(-50%, -50%) rotate(45deg) scale(1);
+}
+
+.stroke-still {
+  stroke: #232323;
+}
+
+.stroke-animation {
+  -webkit-animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+          animation: stroke-spacing 1.2s ease-in, stroke-color 4.8s linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+@-webkit-keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@keyframes stroke-spacing {
+  0% {
+    stroke-dasharray: 0 200;
+  }
+  45% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 200 200;
+  }
+  90% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+  100% {
+    stroke-dashoffset: -200;
+    stroke-dasharray: 200 200;
+  }
+}
+
+@-webkit-keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #32326e; }
+  74% { stroke: #32326e; }
+  75% { stroke: #78325a; }
+  99% { stroke: #78325a; }
+}
+
+@keyframes stroke-color {
+  0%  { stroke: #3498DB; }
+  24% { stroke: #643232; }
+  25% { stroke: #327864; }
+  49% { stroke: #327864; }
+  50% { stroke: #32326e; }
+  74% { stroke: #32326e; }
+  75% { stroke: #78325a; }
+  99% { stroke: #78325a; }
+}
