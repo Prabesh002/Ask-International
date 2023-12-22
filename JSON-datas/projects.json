@@ -1,6 +1,17 @@
 {
   "services": {
-    "ongoing": [],
+    "ongoing": [
+      {
+        "banner": "https://res.cloudinary.com/dxdry321q/image/upload/v1703243946/restaurant_images/ehmuxl1mdzqakwzzxu7r.jpg",
+        "images": [
+          "https://res.cloudinary.com/dxdry321q/image/upload/v1703243948/restaurant_images/mu1ib1xts1swznmvflzt.jpg"
+        ],
+        "comments": [
+          "Okay!"
+        ],
+        "projectName": "Test"
+      }
+    ],
     "completed": []
   }
 }

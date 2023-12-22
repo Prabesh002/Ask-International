@@ -1,0 +1,70 @@
+/* Add these styles to your existing CSS */
+.overlay2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  /* Existing styles for the modal */
+  .modal2 {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+   
+  }
+/* New styles for the modal header */
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* New styles for the project images */
+  #projectImages {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    flex-direction: row;
+  }
+  
+  .project-image {
+    width: 100px; /* Adjust the width of each image as needed */
+    height: 75px; /* Set a specific aspect ratio for a rectangle shape (e.g., 4:3) */
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-image:hover {
+    transform: scale(1.05); /* Add a subtle zoom effect on hover */
+  }
+  
+  /* New styles for the bottom text */
+  .modal-bottom-text {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+  }
+  

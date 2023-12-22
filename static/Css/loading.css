@@ -23,6 +23,11 @@ main {
     padding: 1.5em 0;
 }
 
+.loader h1{
+    display: grid;
+    align-items: center;
+}
+
 .ip {
     width: 16em;
     height: 8em;
