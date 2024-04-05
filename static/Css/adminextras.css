@@ -113,7 +113,7 @@
     display: block;
   }
   
-  /* Add loading animation if desired */
+
   @keyframes spin {
     to { transform: rotate(360deg); }
   }
@@ -153,7 +153,7 @@
     overflow: auto;
   }
   
-  /* Style for input fields, buttons, etc. inside the edit panel */
+ 
   .edit-panel input,
   .edit-panel textarea,
   .edit-panel select,
@@ -162,5 +162,5 @@
     width: 100%;
   }
   
-  /* Add more styles as needed */
+  
   
